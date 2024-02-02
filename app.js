@@ -23,6 +23,7 @@ app.use("/admin",verifyToken, require('./routes/admin'));
 app.use("/products", require('./routes/product'));
 app.use("/cart", require('./routes/cart'));
 app.use("/user", require('./routes/users'));
+app.use("/order", require('./routes/order'));
 
 
 app.listen(3000, () => {

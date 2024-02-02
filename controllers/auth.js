@@ -3,7 +3,6 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
 exports.register = (req, res) => {
-    console.log(req.body);
     const { name, email, password, confirmpassword } = req.body;
     if (!name || !email || !password || !confirmpassword) {
         return res.status(401).json({ error: 'All feilds are required.' });
@@ -31,7 +30,6 @@ exports.register = (req, res) => {
 }
 
 exports.login = (req, res) => {
-    console.log(req.body);
     const { email, password } = req.body;
     if (!password || !email) {
         return res.status(401).json({ error: 'All feilds are required.' });
